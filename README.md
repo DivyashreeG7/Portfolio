@@ -1,2 +1,2 @@
-# Portfolio
-This is my fully responsive personal portfolio website built using HTML, Tailwind CSS, and JavaScript
+# Divyashree G Portfolio
+This is a personal portfolio site built with HTML, CSS and JavaScript.

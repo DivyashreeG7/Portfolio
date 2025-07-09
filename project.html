@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Divyashree G</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+    .fade-up-delay-1 { animation-delay: 0.2s; }
+    .fade-up-delay-2 { animation-delay: 0.4s; }
+    .fade-up-delay-3 { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+     body { 
+      font-family: 'Poppins', sans-serif; 
+      scroll-behavior: smooth;
+    }
+    
+    .profile-img {
+      border-radius: 50%;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border: 6px solid #2563eb;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3);
+    }
+    
+    .floating-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .social-icon {
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #1d4ed8;
+    }
+    
+    .btn-primary {
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .slide-in-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .slide-in-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+   
+    .nav-item {
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+    
+    
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #2563eb;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .nav-item:hover::after {
+      width: 80%;
+    }
+    
+    .nav-item.active::after {
+      width: 80%;
+    }
+    
+    
+    .typewriter {
+      border-right: 3px solid #2563eb;
+      animation: typing 3s steps(30, end), blink 1s infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    </style>
+    <head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+
+   <header class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600 slide-in-left">Divyashree G</h1>
+      <ul class="flex space-x-8 text-blue-600 font-medium slide-in-right">
+        <li><a href="index.html" class="nav-item">Home</a></li>
+        <li><a href="about.html" class="nav-item">About</a></li>
+        <li><a href="project.html" class="nav-item active font-semibold">Projects</a></li>
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="min-h-screen px-6 py-16 text-center">
+    <h2 class="text-4xl font-bold text-blue-700 mb-10 fade-in ">My Projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+     <!-- Project 1 -->
+<a href="https://github.com/yourusername/surplus-to-serve" target="_blank" class="block">
+  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition fade-up fade-up-delay-1">
+    <img src="image/surplus.png" alt="Surplus to Serve" class="rounded-md mb-4 h-48 w-full object-cover">
+    <h3 class="text-xl font-bold text-blue-600 mb-2">Surplus to Serve</h3>
+    <p class="text-gray-700 mb-2">A food donation platform connecting donors to NGOs to reduce waste.</p>
+    <p class="text-sm text-gray-600"><strong>Tech Used:</strong> HTML, CSS, JS, Node.js, MongoDB</p>
+  </div>
+</a>
+
+<!-- Project 2 -->
+<a href="https://github.com/yourusername/fitness-management-system" target="_blank" class="block">
+  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition fade-up fade-up-delay-2">
+    <img src="image/fitness.jpg.jpeg" alt="Fitness Management System" class="rounded-md mb-4 h-48 w-full object-cover">
+    <h3 class="text-xl font-bold text-blue-600 mb-2">Fitness Management System</h3>
+    <p class="text-gray-700 mb-2">Web platform to manage gym users, workouts, trainers, and progress.</p>
+    <p class="text-sm text-gray-600"><strong>Tech Used:</strong> HTML, CSS, JS, Java, MySQL</p>
+  </div>
+</a>
+
+<!-- Project 3 -->
+<a href="https://github.com/yourusername/blood-bank-donation-system" target="_blank" class="block">
+  <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition fade-up fade-up-delay-3">
+    <img src="image/bloodbank.jpg" alt="Blood Bank Donation System" class="rounded-md mb-4 h-48 w-full object-cover">
+    <h3 class="text-xl font-bold text-blue-600 mb-2">Blood Bank Donation System</h3>
+    <p class="text-gray-700 mb-2">App to connect blood donors and recipients, manage stock & alerts.</p>
+    <p class="text-sm text-gray-600"><strong>Tech Used:</strong> HTML, CSS, JS, PHP, MySQL</p>
+  </div>
+</a>
+
+
+    </div>
+  </section>
+
+</body>
+</html>

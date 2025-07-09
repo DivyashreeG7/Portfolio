@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divyashree G | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+</head>
+<style>
+     body { 
+      font-family: 'Poppins', sans-serif; 
+      scroll-behavior: smooth;
+    }
+    
+    .profile-img {
+      border-radius: 50%;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border: 6px solid #2563eb;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3);
+    }
+    
+    .floating-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .social-icon {
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #1d4ed8;
+    }
+    
+    .btn-primary {
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .slide-in-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .slide-in-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+   
+    .nav-item {
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+    
+    
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #2563eb;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .nav-item:hover::after {
+      width: 80%;
+    }
+    
+    .nav-item.active::after {
+      width: 80%;
+    }
+    
+    
+    .typewriter {
+      border-right: 3px solid #2563eb;
+      animation: typing 3s steps(30, end), blink 1s infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    
+  
+</style>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600 slide-in-left">Divyashree G</h1>
+      <ul class="flex space-x-8 text-blue-600 font-medium slide-in-right">
+        <li><a href="index.html" class="nav-item  active font-semibold">Home</a></li>
+        <li><a href="about.html" class="nav-item">About</a></li>
+        <li><a href="project.html" class="nav-item">Projects</a></li>
+        <li><a href="contact.html" class="nav-item">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-20">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Profile Image -->
+      <div class="mb-8 fade-in">
+        <img src="https://raw.githubusercontent.com/DivyashreeG7/assets/main/mypic.jpg" alt="Divyashree G" class="profile-img mx-auto floating-animation">
+      </div>
+      
+      <!-- Main Content -->
+      <div class="space-y-8">
+        
+        <!-- Name & Title -->
+        <div class="fade-in">
+          <h1 class="text-5xl md:text-6xl font-bold text-blue-600 mb-4">
+            Hi, I'm Divyashree G
+          </h1>
+          <div class="text-xl md:text-2xl text-gray-700 font-medium">
+            Web Developer | Full Stack Developer | UI/UX Designer
+          </div>
+        </div>
+        
+        <!-- Description -->
+        <div class="fade-in">
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Passionate about crafting clean and responsive websites. Skilled in Java, JavaScript, MongoDB, and modern web design. Currently pursuing Information Science at BMSIT.
+          </p>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="fade-in">
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="image/Divyashree_resume.pdf" download 
+               class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg">
+              <i class="fas fa-download mr-2"></i>
+              Download Resume
+            </a>
+            <a href="contact.html" 
+               class="btn-primary border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold text-lg">
+              <i class="fas fa-envelope mr-2"></i>
+              Get In Touch
+            </a>
+          </div>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="fade-in">
+          <div class="flex justify-center space-x-8 mt-8">
+            <a href="https://www.linkedin.com/in/divyashree-g-50069b293" target="_blank" 
+               class="social-icon text-blue-600 hover:text-blue-800" title="LinkedIn">
+              <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a href="https://github.com/" target="_blank" 
+               class="social-icon text-blue-600 hover:text-blue-800" title="GitHub">
+              <i class="fab fa-github text-3xl"></i>
+            </a>
+            <a href="mailto:divyashreeg2005@gmail.com" 
+               class="social-icon text-blue-600 hover:text-blue-800" title="Email">
+              <i class="fas fa-envelope text-3xl"></i>
+            </a>
+
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
